@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="3dp"
+    card_view:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="@dimen/vertical_margin"
+        >
+
+        <LinearLayout
+            android:id="@+id/linear_autor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_pull_img_autor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/image_horizontal_margin"
+                android:paddingLeft="@dimen/image_horizontal_margin"
+                android:paddingRight="@dimen/image_horizontal_margin"
+                android:paddingTop="@dimen/image_vertical_margin"
+                android:src="@mipmap/ic_action_device_now_wallpaper" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_pull_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/linear_autor"
+            android:paddingTop="@dimen/image_vertical_margin"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_pull_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/font_size_title"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="RXReactive"
+                />
+
+            <TextView
+                android:id="@+id/txt_pull_autor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_pull_title"
+                android:textSize="@dimen/font_size_secondary"
+                android:textColor="@color/colorPrimaryText"
+                android:text="Juca" />
+
+            <TextView
+                android:id="@+id/txt_pull_body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorSecondaryText"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="Lorem ipsum dolor sit amet" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_pull_star"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear_pull_info"
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:layout_toRightOf="@+id/linear_autor">
+
+            <TextView
+                android:id="@+id/txt_pull_data"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/colorAccent"
+                android:gravity="center_vertical"
+                android:text="18/03/2017"
+                android:textSize="@dimen/font_size_caption" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="image_horizontal_margin">16dp</dimen>
+    <dimen name="image_vertical_margin">16dp</dimen>
+    <dimen name="vertical_margin">12dp</dimen>
+
+    <dimen name="font_size_title">16sp</dimen>
+    <dimen name="font_size_secondary">14sp</dimen>
+    <dimen name="font_size_caption">12sp</dimen>
+
+
+</resources>
