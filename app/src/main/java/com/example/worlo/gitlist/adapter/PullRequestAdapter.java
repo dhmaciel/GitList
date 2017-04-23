@@ -13,7 +13,6 @@ import android.widget.TextView;
 import com.example.worlo.gitlist.R;
 import com.example.worlo.gitlist.model.PullRequest;
 import com.example.worlo.gitlist.util.Utils;
-import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -61,7 +60,8 @@ public class PullRequestAdapter extends RecyclerView.Adapter<PullRequestAdapter.
     public void onBindViewHolder(PullRequestViewHolder holder, int position) {
         final PullRequest pullRequest = pullRequests.get(position);
 
-        loadImage(pullRequest.getUser().getAvatarUrl(), holder.imageViewAutor);
+        Utils.loadImageCacheOrOnLine(context, pullRequest.getUser().getAvatarUrl(), holder.imageViewAutor);
+
         holder.txtAutor.setText(pullRequest.getUser().getLogin());
         holder.txtTituloPullRequest.setText(pullRequest.getTitle());
         holder.txtBodyPullRequest.setText(pullRequest.getBody());
@@ -76,15 +76,6 @@ public class PullRequestAdapter extends RecyclerView.Adapter<PullRequestAdapter.
                 }
             }
         });
-    }
-
-    private void loadImage(String url, ImageView imageView) {
-        Picasso.with(context)
-                .load(url)
-                .placeholder(R.mipmap.ic_action_device_now_wallpaper)
-                .error(R.mipmap.ic_action_device_now_wallpaper)
-                .resize(100, 100)
-                .into(imageView);
     }
 
     @Override

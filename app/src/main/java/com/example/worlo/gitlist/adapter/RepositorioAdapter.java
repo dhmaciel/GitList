@@ -13,7 +13,6 @@ import com.example.worlo.gitlist.R;
 import com.example.worlo.gitlist.activity.PullRequestActivity;
 import com.example.worlo.gitlist.model.Item;
 import com.example.worlo.gitlist.util.Utils;
-import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -65,7 +64,6 @@ public class RepositorioAdapter extends RecyclerView.Adapter<RepositorioAdapter.
 
         Utils.loadImageCacheOrOnLine(context, item.getOwner().getAvatarUrl(), holder.imageViewAutor);
 
-        //loadImage(item.getOwner().getAvatarUrl(), holder.imageViewAutor);
         holder.txtAutor.setText(item.getOwner().getLogin());
         holder.txtNomeRepositorio.setText(item.getName());
         holder.txtDescRepositorio.setText(item.getDescription());
@@ -80,15 +78,6 @@ public class RepositorioAdapter extends RecyclerView.Adapter<RepositorioAdapter.
                 context.startActivity(intent);
             }
         });
-    }
-
-    private void loadImage(String url, ImageView imageView){
-        Picasso.with(context)
-                .load(url)
-                .placeholder(R.mipmap.ic_action_device_now_wallpaper)
-                .error(R.mipmap.ic_action_device_now_wallpaper)
-                .resize(100, 100)
-                .into(imageView);
     }
 
     @Override

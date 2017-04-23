@@ -1,12 +1,10 @@
 package com.example.worlo.gitlist;
 
-import android.support.test.espresso.assertion.ViewAssertions;
 import android.support.test.espresso.contrib.RecyclerViewActions;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
 import com.example.worlo.gitlist.activity.PullRequestActivity;
-import com.example.worlo.gitlist.utils_test.RecyclerViewMatcher;
 
 import org.junit.Rule;
 import org.junit.Test;
@@ -14,9 +12,7 @@ import org.junit.runner.RunWith;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
-import static android.support.test.espresso.matcher.ViewMatchers.hasDescendant;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
-import static android.support.test.espresso.matcher.ViewMatchers.withText;
 
 /**
  * Created by worlo on 20/03/2017.

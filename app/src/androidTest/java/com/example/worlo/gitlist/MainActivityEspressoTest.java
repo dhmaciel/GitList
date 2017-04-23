@@ -36,6 +36,9 @@ public class MainActivityEspressoTest {
         onView(withRecyclerView(R.id.recycler_view_repositorios).atPosition(3))
                 .check(ViewAssertions.matches(hasDescendant(withText("square"))));
 
+        onView(withRecyclerView(R.id.recycler_view_repositorios).atPosition(5))
+                .check(ViewAssertions.matches(hasDescendant(withText("iluwatar"))));
+
         onView(withId(R.id.recycler_view_repositorios)).perform(scrollToPosition(2));
 
         onView(withId(R.id.recycler_view_repositorios))

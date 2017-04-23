@@ -7,7 +7,7 @@
 
     <!-- MainActivity -->
     <string name="title_java">Java</string>
-    <string name="toast_erro_load_repositorios">Não foi possível carregar a listagem de repositórios.erifique a conexão com a internet!</string>
+    <string name="toast_erro_load_repositorios">Não foi possível carregar a listagem de repositórios.Verifique a conexão com a internet!</string>
 
     <!-- Pull Request -->
     <string name="toast_erro_load_pull_request">Não foi possível carregar a listagem de pull requests.Verifique a conexão com a internet!</string>
